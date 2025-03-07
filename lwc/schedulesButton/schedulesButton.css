@@ -1,0 +1,170 @@
+/* Estilo para o botão */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 12px;
+    gap: 8px;
+    height: 40px;
+    width: 201px;
+    border: none;
+    background: #FF342B;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.label {
+    line-height: 22px;
+    font-size: 17px;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background: #e52e26;
+}
+
+.button:hover .svg-icon {
+    animation: slope 1s linear infinite;
+}
+
+@keyframes slope {
+    0% {
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+    }
+}
+
+/* Estilo para o Modal */
+.slds-modal__container {
+    position: relative;
+    max-width: 600px; /* Ajuste para modal mais largo */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px; /* Ajuste na borda */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 20px;
+}
+
+.slds-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* Fundo translúcido mais escuro */
+    z-index: 1000;
+}
+
+.slds-modal__header {
+    background-color: #ff5e5e; /* Rosa mais bonito */
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+}
+
+.slds-modal__header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.slds-modal__content {
+    padding: 20px;
+    max-height: 60vh; /* Altura máxima para que o conteúdo não ultrapasse a tela */
+    overflow-y: auto; /* Permite rolagem se necessário */
+}
+
+.slds-modal__footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-modal-footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo para as opções de procedimentos */
+.procedures-list {
+    margin-top: 15px;
+}
+
+.procedures-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.custom-checkbox-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-label::before {
+    background-color: #ff007f; /* Rosa quando marcado */
+    border-color: #ff007f;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-label {
+    color: #ff007f; /* Rosa no texto */
+}
+
+/* Botões do modal */
+.slds-button_neutral {
+    background-color: #f4f6f9;
+    border: 1px solid #d8dde6;
+}
+
+.slds-button_brand {
+    background-color: #ff007f; 
+    border: 1px solid #ff007f; 
+}
+
+.slds-button_brand:hover {
+    background-color: #e60073;
+    border: 1px solid #e60073;
+}
+
+.slds-modal__close {
+    color: #fff;
+}

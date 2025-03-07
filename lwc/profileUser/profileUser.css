@@ -1,0 +1,33 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; 
+    height: 80px; 
+    background-color: #F9ACB7; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 14px; 
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    border-color: transparent;
+}
+
+.circle:hover {
+    transform: scale(1.1); 
+}
+
+
+button {
+    border: none;
+}
+
+button.hidden-bg {
+    background-color: transparent;
+}

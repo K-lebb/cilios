@@ -1,0 +1,73 @@
+<template>
+    <div class="slds-p-around_medium"> 
+        <lightning-card title="Cadastro de Cliente" icon-name="custom:custom63">
+            <div class="slds-p-around_medium">
+                <lightning-input
+                    label="Nome"
+                    value={nome}
+                    onchange={handleInputChange}
+                    data-field="nome">
+                </lightning-input>
+                
+                <lightning-input
+                    label="UserName"
+                    value={userName}
+                    onchange={handleInputChange}
+                    data-field="userName">
+                </lightning-input>
+                
+                <lightning-input
+                    label="Email"
+                    type="email"
+                    value={email}
+                    onchange={handleInputChange}
+                    data-field="email">
+                </lightning-input>
+
+                <lightning-input
+                    label="Senha"
+                    type="password"
+                    value={password}
+                    onchange={handleInputChange}
+                    data-field="password">
+                </lightning-input>
+                
+                <lightning-button
+                    label="Cadastrar"
+                    variant="brand"
+                    onclick={handleSubmit}>
+                </lightning-button>
+            </div>
+
+            <template if:true={successMessage}>
+                <p class="slds-text-color_success slds-p-top_medium">{successMessage}</p>
+            </template>
+            
+            <template if:true={errorMessage}>
+                <p class="slds-text-color_error slds-p-top_medium">{errorMessage}</p>
+            </template>
+        </lightning-card>
+    </div>
+
+    <!-- Modal -->
+    <template if:true={showModal}>
+        <section class="slds-modal slds-fade-in-open" aria-hidden="false">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header custom-modal-header">
+                    <h2 class="slds-text-heading_medium">{modalTitle}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>{modalMessage}</p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Fechar" onclick={closeModal}></lightning-button>
+                    <a href="/login">
+                    <lightning-button label="Login"></lightning-button>
+                </a>
+
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

@@ -1,0 +1,64 @@
+.doubts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+.doubt-block {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doubt-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.doubt-block:hover {
+    background-color: #f0f8ff;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+.doubt-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.doubt-status {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.custom-modal .slds-modal__container {
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.delete-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #d9534f;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+    color: #c9302c;
+}

@@ -1,0 +1,57 @@
+<template>
+    <button class="button" onclick={openModal}>
+        <span class="label">Agendamentos</span>
+    </button>
+
+    <template if:true={showModal}>
+        <section class="slds-modal slds-fade-in-open custom-modal">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header custom-modal-header">
+                    <h2 class="slds-text-heading_medium">{modalTitle}</h2>
+                </header>
+
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>{modalMessage}</p>
+
+                    <div class="procedures-list">
+                        <label class="slds-form-element__label">Procedimentos</label>
+                        <lightning-radio-group
+                            name="procedures"
+                            label="Selecione os procedimentos"
+                            options={procedimentos}
+                            value={selectedProcedures}
+                            onchange={handleProcedureChange}
+                            class="procedures-options"
+                        ></lightning-radio-group>
+                    </div>
+
+                    <br>
+
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="selectDate">Escolha a data</label>
+                        <input type="date" id="selectDate" name="selectDate" onchange={handleDateChange} class="slds-input" />
+                    </div>
+
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="selectTime">Escolha o horário</label>
+                        <select class="slds-select" id="selectTime" name="selectTime" onchange={handleTimeChange}>
+                            <template for:each={availableTimes} for:item="time">
+                                <option key={time.value} value={time.value}>{time.label}</option>
+                            </template>
+                        </select>
+                    </div>
+
+                    <div class="slds-form-element">
+                        <p if:true={errorMessage} class="error-message">{errorMessage}</p>
+                        <p if:true={successMessage} class="success-message">{successMessage}</p>
+                    </div>
+                </div>
+
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Fechar" onclick={closeModal} class="slds-button_neutral"></lightning-button>
+                    <lightning-button label="Agendar" onclick={handleSubmit} class="slds-button_brand"></lightning-button>
+                </footer>
+            </div>
+        </section>
+    </template>
+</template>

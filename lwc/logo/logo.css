@@ -1,0 +1,46 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+    border: none;
+    outline: none;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: none;
+    display: block; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 667px) {
+    .logo-container {
+        display: none;
+    }
+    .circle {
+        display: none;
+    }
+}

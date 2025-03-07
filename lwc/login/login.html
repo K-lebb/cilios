@@ -1,0 +1,51 @@
+<template>
+    <div class="login-container">
+        <h1>Login</h1>
+        <lightning-input 
+            label="E-mail" 
+            type="email" 
+            value={email} 
+            onchange={handleEmailChange} 
+            required>
+        </lightning-input>
+
+        <lightning-input 
+            label="Senha" 
+            type="password" 
+            value={password} 
+            onchange={handlePasswordChange} 
+            required>
+        </lightning-input>
+
+        <lightning-button 
+            label="Entrar" 
+            variant="brand" 
+            onclick={handleLogin}>
+        </lightning-button>
+    </div>
+
+    <template if:true={showModal}>
+        <section class="slds-modal slds-fade-in-open" aria-hidden="false">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header custom-modal-header">
+                    <h2 class="slds-text-heading_medium">{modalTitle}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>{modalMessage}</p>
+                </div>
+                <footer class="slds-modal__footer">
+
+                    <lightning-button label="Fechar" onclick={closeModal}></lightning-button>
+
+                    <template if:true={isLoginSuccessful}>
+                        <a href="/">
+                            <lightning-button label="Início" onclick={carregar}></lightning-button>
+                        </a>
+                    </template>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

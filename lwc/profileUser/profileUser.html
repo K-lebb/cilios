@@ -1,0 +1,13 @@
+<template>
+    <template if:true={showProfile}>
+        <button onclick={perfil} class={isProfileVisible}>
+            <div class="circle" title="Clique para acessar o perfil">
+                {userName}
+            </div>
+        </button>
+    </template>
+
+    <template if:false={showProfile}>
+        <lightning-button label="Login" onclick={logar}></lightning-button>
+    </template>
+</template>
