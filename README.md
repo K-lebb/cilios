@@ -1,6 +1,6 @@
-# 🦸‍♂️ API Marvel
+# 💅 💇‍♀️ Site de agendamento de procedimentos estéticos
 
-Um projeto de um site de API, desenvolvido para aprofundar o conhecimento sobre esse mecanismo. O objetivo é apresentar funcionalidades interativas e um design atrativo utilizando **HTML**, **CSS** e **JavaScript**.  
+Um projeto de um site que simula o agendamento em um salão de beleza com um design atrativo utilizando **HTML**, **CSS** e **JavaScript** com o framework **LWC** do SalesForce..  
 <img src='./img/ciliosGIF.gif' height="400px" width="700px">
 
 ---
